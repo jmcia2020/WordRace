@@ -1,21 +1,23 @@
 /* global words */
 "use strict";
 console.log("Ready to Race!");
-var userInput = "";
-var score = 0;
-console.log(words);
+var userInput = '';
+var currentPlayer;
+
+
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
-    score + 100;
     return true;
+    users[currentPlayer].scoring();
   } else {
     return false;
+    alert("Please enter a valid word.");
   }
 }
 
 function handleUserName(event) {
   event.preventDefault();
-  var userNameInput = document.getElementById("username");
+  var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
   userName = userName.toUpperCase();
   loadUser(userName);
@@ -23,11 +25,10 @@ function handleUserName(event) {
 
 function handleInputWords(event) {
   event.preventDefault();
-  var wordInput = document.getElementById("wordInput");
-  var userInput = wordInput.value;
+  var wordInput = document.getElementById('wordInput');
+  userInput = wordInput.value;
   userInput = userInput.toLowerCase();
-  //updateScore();
-  
+  wordsValidate();
 }
 
 var usersName = document.getElementById("inputUserName");
@@ -39,6 +40,14 @@ userInput.addEventListener("submit", handleUserName);
 var User = function (name, scores) {
   this.name = name;
   this.scores = scores;
+  this.currentScore;
+};
+
+User.prototype.scoring = function () {
+  this.currentScore += 50;
+  for (var i = 3; i < userInput.length; i++) {
+    this.currentScore += 25;
+  }
 };
 
 User.prototype.addScore = function (score) {
@@ -49,7 +58,7 @@ User.prototype.saveToLocalStorage = function () {
   localStorage.setItem(this.name, JSON.stringify(this.scores));
 };
 
-  function loadUser(name) {
-    var scores = JSON.parse(localStorage.getItem(name.toUpperCase())) || [];
-    user = new User(name,scores);
-  }
+function loadUser(name) {
+  var scores = JSON.parse(localStorage.getItem(name.toUpperCase())) || [];
+  var user = new User(name,scores);
+}
