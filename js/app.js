@@ -1,8 +1,8 @@
 /* global words */
 "use strict";
 console.log("Ready to Race!");
-let userInput = "";
-let score = 0;
+var userInput = "";
+var score = 0;
 console.log(words);
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
