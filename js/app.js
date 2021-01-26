@@ -25,7 +25,7 @@ function handleInputWords(event) {
   event.preventDefault();
   var wordInput = document.getElementById("wordInput");
   var userInput = wordInput.value;
-  userInput = userInput.toUpperCase();
+  userInput = userInput.toLowerCase();
   //updateScore();
   
 }
