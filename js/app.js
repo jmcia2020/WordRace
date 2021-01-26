@@ -15,35 +15,35 @@ function wordsValidate() {
 
 //button
 // Get the input field
-var input = document.getElementById('myInput');
+var input = document.getElementById("myInput");
 // Execute a function when the user releases a key on the keyboard
-input.addEventListener('keyup', function(event) {
+input.addEventListener("keyup", function (event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
     event.preventDefault();
     // Trigger the button element with a click
-    document.getElementById('myBtn').click();
+    document.getElementById("myBtn").click();
   }
 });
 
 function handleUserName(event) {
   event.preventDefault();
-  var userNameInput = document.getElementById('username');
+  var userNameInput = document.getElementById("username");
   var userName = useNameInput.value;
 }
 
 function handleInputWords(event) {
   event.preventDefault();
-  var wordInput = document.getElementById('wordInput');
+  var wordInput = document.getElementById("wordInput");
   var userNameInput = wordInput.value;
 }
 
-var usersName = document.getElementById('inputUserName');
-usersName = document.getElementById('submit', handleInputWords);
+var usersName = document.getElementById("inputUserName");
+usersName = document.getElementById("submit", handleInputWords);
 
-var userInput = document.getElementById('inputWords');
-userInput.addEventListener('submit', handleUserName);
+var userInput = document.getElementById("inputWords");
+userInput.addEventListener("submit", handleUserName);
 
 var User = function (name, scores) {
   this.name = name;
