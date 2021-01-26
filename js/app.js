@@ -7,11 +7,11 @@ var users = [];
 
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
-    return true;
     users[currentPlayer].scoring();
+    return true;
   } else {
-    return false;
     alert("Please enter a valid word.");
+    return false;
   }
 }
 
