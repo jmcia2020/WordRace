@@ -15,14 +15,18 @@ A word game website for project week
 
 ### Links and Resources
 
-* [Repository](https://deltavwordrace.github.io/WordRace/){:target="_blank"}
-* [Wireframe](https://deltavcode.slack.com/files/U01HEMHLG2K/F01KT5YHXKM/word_game_svg.svg){:target="_blank"}
+* [Repository](https://github.com/DeltaVWordRace/WordRace)
+* [Wireframe](href="wireframe/wordRaceWF.JPG")
 
 ### Possible Resources for Stretch Goals
 
-* [Word validation](https://github.com/dwyl/english-words){:target="_blank"}  
+* [Word validation](ADD NATHANs TEXT FILE)
 
-* [Theme based dictionary](https://enchantedlearning.com/wordlist){:target="_blank"}
+* Stretch Dictionaries
+
+    ** [Ultimate dictionary](https://github.com/dwyl/english-words)  
+
+    ** [Theme based dictionary](https://enchantedlearning.com/wordlist)
 
 ### Reflections and Comments
 
