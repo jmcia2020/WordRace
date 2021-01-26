@@ -21,7 +21,6 @@ A word game website for project week
 ### Possible Resources for Stretch Goals
 
 - [Word validation](https://github.com/dwyl/english-words){:target="\_blank"}
-
 - [Theme based dictionary](https://enchantedlearning.com/wordlist){:target="\_blank"}
 - [1000 word txt document](https://gist.github.com/deekayen/4148741)
 
