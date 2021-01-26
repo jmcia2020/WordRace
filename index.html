@@ -4,12 +4,13 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Word Race</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  </head> 
 
   <body>
     <header>
@@ -18,10 +19,11 @@
 
     <nav>
       <ul>
-        <li>About Us</li>
-        <li>Leaderboard</li>
-        <li>LogIn</li>
-      </ul>
+        <li><a href="index"></a>Home</li>
+        <li><a href="leaderboard"></a>Leaderboard</li>
+        <li><a href="aboutus.html"></a>About Us</li>
+        <!-- <li><a href="leaderboard"></a>Leaderboard</li> -->
+    </ul>
     </nav>
 
     <main>
@@ -44,16 +46,23 @@
         </form>
       </section>
     </main>
-
+       
     <footer>
-      <h2>Instructions</h2>
-      <p>
-        Submit a word in the text box above by pushing the button or using your
-        enter key. Then, use the last letter of that word as the first letter
-        the next word you enter. See how long you can keep this pattern going.
-      </p>
-      <h2>Scoring</h2>
-      <p>TBD</p>
+
+      <div id='instructions'>
+            <h2>Instructions</h2>
+            <p>
+            Submit a word in the text box above by pushing the button or using yourenter key.<br>
+            Use the last letter of that word as the first letter the next word you enter.<br> 
+            See how long you can keep this pattern going.<br>
+
+            </p>
+        </div>
+
+        <div id='scoring'>
+            <h2>Scoring</h2>
+            <p>TBD</p>
+        </div>
     </footer>
     <script src="js/words.js"></script>
     <script src="js/app.js"></script>

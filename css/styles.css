@@ -1,8 +1,91 @@
+
 body {
   background-color: antiquewhite;
 }
 
+header{
+  height: 75px;
+  background-color: #2EA44F;
+  padding-top: 30px;
+  
+}
+
+h1{
+  font-family: Audiowide;
+  text-align: center;
+  font-size: 50px;
+  color:azure;
+  font-stretch: extra-expanded;
+}
+
+header img{ 
+  background-color: #969696;
+  float:left;
+  margin-top: 15px;
+  margin-right: 30px;
+}
+
+nav{
+  background-color:rgb(30, 30, 36); 
+}
+ nav ul{
+   display:flex;
+   justify-content: space-evenly;
+   /* margin-right: auto; */
+ }
+
+nav ul li{
+ display: inline-block;
+ font-size: 32px;
+ color: rgb(123, 216, 29);
+ line-height: 2em;
+ font-weight: bold;
+ /* padding-right: 60px; */
+ /* padding-left: 50px; */
+}
+
+game-panel{
+
+}
+
+form{
+
+}
+  
+  
+fieldset{
+
+}
+
+label {
+
+}
+
 button {
-  height: 15px;
-  width: 25px;
+height:25px;
+width:50px;
+}
+
+h2{
+  font-family: Audiowide;
+  font-size: 35px;
+  color:azure;
+}
+
+instructions{
+  padding-top: 5px;
+}
+
+scoring{
+  padding-top: 50px;
+}
+
+p{
+  padding-bottom: 15px;
+}
+
+footer{
+  height: 250px;
+  background-color: #2EA44F;
+  padding-top: 30px;
 }
