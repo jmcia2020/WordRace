@@ -20,6 +20,7 @@ A word game website for project week
 
 ### Possible Resources for Stretch Goals
 
+
 * [Word validation](ADD NATHANs TEXT FILE)
 
 * Stretch Dictionaries
