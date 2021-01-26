@@ -3,6 +3,7 @@
 console.log("Ready to Race!");
 var userInput = "";
 var score = 0;
+var users = [];
 console.log(words);
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
@@ -18,7 +19,7 @@ function handleUserName(event) {
   var userNameInput = document.getElementById("username");
   var userName = userNameInput.value;
   userName = userName.toUpperCase();
-  loadUser(userName);
+  users.push(loadUser(userName));
 }
 
 function handleInputWords(event) {
@@ -27,7 +28,6 @@ function handleInputWords(event) {
   var userInput = wordInput.value;
   userInput = userInput.toLowerCase();
   //updateScore();
-  
 }
 
 var usersName = document.getElementById("inputUserName");
@@ -45,11 +45,18 @@ User.prototype.addScore = function (score) {
   this.scores.push(score);
 };
 
-User.prototype.saveToLocalStorage = function () {
-  localStorage.setItem(this.name, JSON.stringify(this.scores));
-};
-
-  function loadUser(name) {
-    var scores = JSON.parse(localStorage.getItem(name.toUpperCase())) || [];
-    user = new User(name,scores);
+function saveToLocalStorage() {
+  var totalUsers = JSON.parse(localStorage.getItem("users"));
+  for (u in users) {
+    localStorage.setItem(users[u].name, JSON.stringify(users[u].scores));
+    if (totalUsers.indexOf(users[u].name) === -1) {
+      totalUsers.push(users[u].name);
+    }
   }
+  localStorage.setItem("users", JSON.stringify(totalUsers));
+}
+
+function loadUser(name) {
+  var scores = JSON.parse(localStorage.getItem(name.toUpperCase())) || [];
+  return new User(name, scores);
+}
