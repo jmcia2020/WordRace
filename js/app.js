@@ -1,2 +1,2 @@
-'use strict';
-console.log('Ready to Race!');
+"use strict";
+console.log("Ready to Race!");

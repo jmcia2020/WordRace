@@ -8,23 +8,24 @@ A word game website for project week
 
 ### Minimum Viable Product
 
-* Input box where user can fill in words
-* Instructions
-* Submit button
-* Keep user's score in local storage
+- Input box where user can fill in words
+- Instructions
+- Submit button
+- Keep user's score in local storage
 
 ### Links and Resources
 
-* [Repository](https://deltavwordrace.github.io/WordRace/){:target="_blank"}
-* [Wireframe](https://deltavcode.slack.com/files/U01HEMHLG2K/F01KT5YHXKM/word_game_svg.svg){:target="_blank"}
+- [Repository](https://deltavwordrace.github.io/WordRace/){:target="\_blank"}
+- [Wireframe](https://deltavcode.slack.com/files/U01HEMHLG2K/F01KT5YHXKM/word_game_svg.svg){:target="\_blank"}
 
 ### Possible Resources for Stretch Goals
 
-* [Word validation](https://github.com/dwyl/english-words){:target="_blank"}  
+- [Word validation](https://github.com/dwyl/english-words){:target="\_blank"}
 
-* [Theme based dictionary](https://enchantedlearning.com/wordlist){:target="_blank"}
+- [Theme based dictionary](https://enchantedlearning.com/wordlist){:target="\_blank"}
+- [1000 word txt document](https://gist.github.com/deekayen/4148741)
 
 ### Reflections and Comments
 
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned.
+- Consider including the answers to your daily journal and submission questions here
+- This is also a good place to reflect on the tools and resources used and learned.
