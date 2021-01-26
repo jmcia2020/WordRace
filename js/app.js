@@ -17,13 +17,17 @@ function handleUserName(event) {
   event.preventDefault();
   var userNameInput = document.getElementById("username");
   var userName = userNameInput.value;
+  userName = userName.toUpperCase();
   loadUser(userName);
 }
 
 function handleInputWords(event) {
   event.preventDefault();
   var wordInput = document.getElementById("wordInput");
-  var userNameInput = wordInput.value;
+  var userInput = wordInput.value;
+  userInput = userInput.toLowerCase();
+  //updateScore();
+  
 }
 
 var usersName = document.getElementById("inputUserName");
