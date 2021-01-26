@@ -2,7 +2,7 @@
 
 ## WordRace
 A word game website for project week
-### Authors: Nathan Hall, Collin Zeets, Jean McMahon
+### Authors: Nathan Hall, Collin Zeets, Jean McMahon, Lillian McBride
 
 ### Minimum Viable Product
 * Input box where user can fill in words
