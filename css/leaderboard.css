@@ -1,0 +1,45 @@
+body {
+    background-color: antiquewhite;
+  }
+  
+  header{
+    height: 75px;
+    background-color: #2EA44F;
+    padding-top: 30px;
+    
+  }
+  
+  h1{
+    font-family: Audiowide;
+    text-align: center;
+    font-size: 50px;
+    color:azure;
+    font-stretch: extra-expanded;
+  }
+  
+  header img{ 
+    background-color: #969696;
+    float:left;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+  
+  nav{
+    background-color:rgb(30, 30, 36); 
+    border-bottom-color:orangered;
+  }
+   nav ul{
+     display:flex;
+     justify-content: space-evenly;
+   }
+  
+  li{
+   display: inline-block;
+   font-size: 32px;
+   line-height: 2em;
+   font-weight: bold;
+  }
+  
+  a{
+    text-decoration: none;
+    color: rgb(123, 216, 29);
