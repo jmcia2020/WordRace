@@ -19,16 +19,15 @@ A word game website for project week
 * [Wireframe](href="wireframe/wordRaceWF.JPG")
 
 ### Possible Resources for Stretch Goals
+* [Photo by Mike Birdy]("https://stocksnap.io/author/29629")
 
-
-* [Word validation](ADD NATHANs TEXT FILE)
+* [1000 word txt document](https://gist.github.com/deekayen/4148741)
 
 * Stretch Dictionaries
 
     ** [Ultimate dictionary](https://github.com/dwyl/english-words)  
 
     ** [Theme based dictionary](https://enchantedlearning.com/wordlist)
-    ** [1000 word txt document](https://gist.github.com/deekayen/4148741)
 
 ### Reflections and Comments
 
