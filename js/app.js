@@ -2,41 +2,46 @@
 "use strict";
 console.log("Ready to Race!");
 var userInput = '';
-var currentPlayer;
+var currentPlayer = 0;
 var users = [];
 
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
-    users[currentPlayer].scoring();
+   // users[currentPlayer].scoring();
     return true;
   } else {
     alert("Please enter a valid word.");
     return false;
   }
 }
-
 function handleUserName(event) {
   event.preventDefault();
+  var form = document.getElementById('inputUserName');
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
+  console.log(userName);
   userName = userName.toUpperCase();
   users.push(loadUser(userName));
+  form.textContent = "Welcome, " + userName;
+  
 }
-
 function handleInputWords(event) {
   event.preventDefault();
+  var form2 = document.getElementById('inputWords');
   var wordInput = document.getElementById('wordInput');
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
+  console.log(userInput);
   wordsValidate();
+  form2.reset();
   //updateScore();
 }
 
 var usersName = document.getElementById("inputUserName");
-usersName = document.getElementById("submit", handleInputWords);
+usersName.addEventListener("submit", handleUserName);
 
 var userInput = document.getElementById("inputWords");
-userInput.addEventListener("submit", handleUserName);
+userInput.addEventListener("submit", handleInputWords);
 
 var User = function (name, scores) {
   this.name = name;
