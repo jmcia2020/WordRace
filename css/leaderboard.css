@@ -5,8 +5,7 @@ body {
   header{
     height: 75px;
     background-color: #2EA44F;
-    padding-top: 30px;
-    
+    padding-top: 30px;  
   }
   
   h1{
@@ -43,3 +42,4 @@ body {
   a{
     text-decoration: none;
     color: rgb(123, 216, 29);
+  }

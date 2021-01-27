@@ -25,9 +25,11 @@ header img{
 }
 
 nav{
-  background-color:rgb(30, 30, 36); 
-  border-bottom-color:orangered;
+  background-color:rgb(30, 30, 36);
+  border-top-color: #C4000C; 
+  border-bottom-color: #C4000C;
 }
+
  nav ul{
    display:flex;
    justify-content: space-evenly;
@@ -81,7 +83,7 @@ h2{
 }
 
 instructions{
-  padding-top: 5px;
+  padding: 5px 5px 5px 5px;
 }
 
 scoring{
@@ -90,6 +92,8 @@ scoring{
 
 p{
   padding-bottom: 15px;
+  line-height: 2em;
+  
 }
 
 footer{
