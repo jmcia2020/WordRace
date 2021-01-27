@@ -9,7 +9,7 @@ var displayWords =[];
 // This function validates the words against the words.js file
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
-    users[currentPlayer].scoring();
+   // users[currentPlayer].scoring();
     return true;
   } else {
     alert("Please enter a valid word.");
@@ -30,6 +30,7 @@ function handleUserName(event) {
 }
 
 // This function is an event handler that changes the wordInput to lowerCase for validation
+
 function handleInputWords(event) {
   event.preventDefault();
   var form2 = document.getElementById('inputWords');
@@ -43,7 +44,8 @@ function handleInputWords(event) {
 }
 
 var usersName = document.getElementById("inputUserName");
-usersName = document.getElementById("submit", handleUserName);
+
+usersName.addEventListener("submit", handleUserName);
 
 var userInput = document.getElementById("inputWords");
 userInput.addEventListener("submit", handleInputWords);
@@ -53,7 +55,6 @@ var User = function (name, scores) {
   this.scores = scores;
   this.currentScore;
 };
-
 
 User.prototype.scoring = function () {
   this.currentScore += 50;
