@@ -27,10 +27,13 @@ function handleUserName(event) {
 }
 function handleInputWords(event) {
   event.preventDefault();
+  var form2 = document.getElementById('inputWords');
   var wordInput = document.getElementById('wordInput');
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
+  console.log(userInput);
   wordsValidate();
+  form2.reset();
   //updateScore();
 }
 
