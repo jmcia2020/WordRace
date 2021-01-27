@@ -4,8 +4,9 @@ console.log("Ready to Race!");
 var userInput = '';
 var currentPlayer = 0;
 var users = [];
-var displayWords = [];
+var displayWords =[];
 
+// This function validates the words against the words.js file
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
    // users[currentPlayer].scoring();
@@ -15,17 +16,21 @@ function wordsValidate() {
     return false;
   }
 }
+
+// This function is an event handler that takes in the userName and changes it to UpperCase
 function handleUserName(event) {
   event.preventDefault();
-  var form = document.getElementById('inputUserName');
+  var form = document.getElementById('inputUserName'); 
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
-  console.log(userName);
+  console.log(userName)
   userName = userName.toUpperCase();
   users.push(loadUser(userName));
-  form.textContent = "Welcome, " + userName;
-  
+  form.textContent = "welcome" + userName;
 }
+
+// This function is an event handler that changes the wordInput to lowerCase for validation
+
 function handleInputWords(event) {
   event.preventDefault();
   var form2 = document.getElementById('inputWords');
@@ -39,6 +44,7 @@ function handleInputWords(event) {
 }
 
 var usersName = document.getElementById("inputUserName");
+
 usersName.addEventListener("submit", handleUserName);
 
 var userInput = document.getElementById("inputWords");
