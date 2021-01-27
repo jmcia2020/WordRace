@@ -4,6 +4,7 @@ console.log("Ready to Race!");
 var userInput = '';
 var currentPlayer = 0;
 var users = [];
+var displayWords = [];
 
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
