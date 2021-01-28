@@ -47,18 +47,24 @@ text-align: center;
 #dash{
   /* text-align: center; */
 
-  width: 750px;
+  width: 1000px;
+  height: 500px;
+  display: block;
+
+/*width: 750px;
   margin: 0 auto;
   background-repeat: no-repeat;
-}
+}*/
 
 #placeHolder {
  height: 300px;
+
  padding-top: 125px;
- padding-left: 250px;
- text-align: left-justify;
+ padding-left: 1050px;
+ float: right;
+ display: inline-block;
  color: lime;
- font-size: larger;
+ font-size: 28px;
 }
 
  #inputWords {
