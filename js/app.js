@@ -35,7 +35,6 @@ function wordsValidate() {
     return false;
   }
 }
-//}
 
 // Event handler that takes in username, changes it to UpperCase, and displays it
 function handleUserName(event) {
