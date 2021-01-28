@@ -42,8 +42,6 @@ function handleUserName(event) {
   var form = document.getElementById('inputUserName');
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
-
-  console.log(userName);
   userName = userName.toUpperCase();
   console.log(userCollection);
   if (userCollection[userName] === undefined) {
