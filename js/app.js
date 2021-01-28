@@ -42,8 +42,6 @@ function handleUserName(event) {
   var form = document.getElementById('inputUserName');
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
-
-  console.log(userName);
   userName = userName.toUpperCase();
   console.log(userCollection);
   if (userCollection[userName] === undefined) {
@@ -62,15 +60,16 @@ function handleInputWords(event) {
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
   wordCount++;
-  displayWords.push(userInput);
-  wordsValidate();
+  if(wordsValidate()){
+    displayWords.push(userInput);
+  }
   if (wordCount === 5) {
     userFinish();
   }
   form2.reset();
   var placeHolder = document.getElementById('placeHolder');
   placeHolder.innerHTML = '';
-  for (var i = displayWords.length()-1; i >= 0; i--) {
+  for (var i = displayWords.length-1; i >= 0; i--) {
     var wordList = document.createElement('span');
     wordList.textContent = displayWords[i];
     placeHolder.appendChild(wordList);

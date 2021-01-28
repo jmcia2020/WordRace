@@ -46,33 +46,38 @@ text-align: center;
 
 #dash{
   /* text-align: center; */
+
   width: 750px;
   margin: 0 auto;
   background-repeat: no-repeat;
 }
 
 #placeHolder {
- height: 550px;
+ height: 300px;
  padding-top: 125px;
  padding-left: 250px;
  text-align: left-justify;
  color: lime;
  font-size: larger;
-
 }
+
+ #inputWords {
+padding-top: 160px;
+padding-right: 80px;
+ }
+
+ #inputUserName{
+padding-top: 160px;
+padding-right: 80px;
+ }
+ 
 form {
-  text-align: center;
+text-align: center;
   }
 
 span {
-  padding: 15px;
+padding: 15px;
 }
-
-
-/* game-panel{
-
-}*/
-
 
 
 /* display: block;
