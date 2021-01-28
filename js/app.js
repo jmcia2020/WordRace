@@ -67,7 +67,11 @@ function handleInputWords(event) {
   }
   form2.reset();
   var placeHolder = document.getElementById('placeHolder');
+<<<<<<< HEAD
   placeHolder.innerHTML = ' ';
+=======
+  placeHolder.innerHTML = '';
+>>>>>>> 5f4fb923a86740cbdca9edd3969612bfccf70674
   for (var i = displayWords.length()-1; i >= 0; i--) {
     var wordList = document.createElement('span');
     wordList.textContent = displayWords[i];
