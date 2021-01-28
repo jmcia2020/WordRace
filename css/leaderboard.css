@@ -1,5 +1,6 @@
 body {
     background-color: antiquewhite;
+       
   }
   
   header{
@@ -18,7 +19,7 @@ body {
     
   nav{
     background-color:rgb(30, 30, 36); 
-    border-bottom-color:orangered;
+    /* border-bottom: */
   }
    nav ul{
      display:flex;
@@ -37,9 +38,11 @@ body {
     color: rgb(123, 216, 29);
   }
 
-  main image{ 
-    width:fit-content;
-    display: center;
+  main{ 
+    position:fixed;
+    background-image: url("../images/photoFinishFull2.jpg");
+    background-size: cover;
+    height: 700px;
   }
 
   table, th, td{
