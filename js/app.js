@@ -12,8 +12,8 @@ document.getElementById("inputWords").style.display = "none";
 //Event listeners added
 var usersName = document.getElementById('inputUserName');
 usersName.addEventListener('submit', handleUserName);
-var userInput = document.getElementById('inputWords');
-userInput.addEventListener('submit', handleInputWords);
+var inputField = document.getElementById('inputWords');
+inputField.addEventListener('submit', handleInputWords);
 
 // Validates words against words.js file and displayWords arr then adds scores to the user object
 function wordsValidate() {
