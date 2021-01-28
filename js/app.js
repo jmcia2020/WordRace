@@ -6,12 +6,17 @@ var userCollection = {};
 var displayWords = [];
 var wordCount = 0;
 
+
+
+
+
 var usersName = document.getElementById('inputUserName');
 usersName.addEventListener('submit', handleUserName);
 var userInput = document.getElementById('inputWords');
 userInput.addEventListener('submit', handleInputWords);
 
 // This function validates the words against the words.js file and the displayWords array
+
 function wordsValidate() {
   if (currentPlayer === null) {
     return;
@@ -36,6 +41,8 @@ function handleUserName(event) {
   var form = document.getElementById('inputUserName');
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
+
+  console.log(userName);
   userName = userName.toUpperCase();
   console.log(userCollection);
   if (userCollection[userName] === undefined) {

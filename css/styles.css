@@ -37,7 +37,7 @@ nav{
 
 li{
  display: inline-block;
- font-size: 32px;
+ font-size: 28px;
  line-height: 2em;
  font-weight: bold;
 }
@@ -48,33 +48,32 @@ a{
 }
 
 #dash{
-  text-align: center;
+  /* text-align: center; */
+  width: 600px;
   display: block;
   margin: 0 auto;
 }
 
 
-/* game-panel{
+/* game-panel */
 
-}
-
-form{
-
-}
+display: block;
+  font-family: Audiowave;
   
   
-fieldset{
+/* fieldset{
 
-}
+} */
 
-label {
+/* label {
 
-}
+} */
 
-button {
+ button {
 height:25px;
 width:50px;
-} */
+background-color: #C4000C;
+}
 
 h2{
   font-family: Audiowide;
