@@ -9,8 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-  </head> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
   <body>
     <header>
@@ -26,18 +29,17 @@
     </nav>
 
     <main>
-     
       <section id="game-panel">
-        <!-- <form id="inputUserName"> -->
-          <fieldset id="gamerId">
+        <form id="inputUserName">
+          <fieldset id="nameField">
             <!-- for in a label matches id of the input -->
             <label for="username">Gamer Tag</label>
             <input id="username" />
             <button>Submit!</button>
           </fieldset>
-        <!-- </form> -->
-        <!-- <form id="inputWords"> -->
-          <fieldset id="wordInput">
+        </form>
+        <form id="inputWords">
+          <fieldset id="wordField">
             <!-- for in a label matches id of the input -->
             <label for="wordInput">Word goes here!</label>
             <input id="wordInput" required />
@@ -46,33 +48,30 @@
         </form>
       </section>
 
-      <section id="wordsInPlay">
-
-      </section>
+      <section id="wordsInPlay"></section>
       <section id="dash">
-        <img src= "images/dashboard.jpg">
+        <img src="images/dashboard.jpg" />
       </section>
-      
     </main>
-       
+
     <footer>
+      <div id="instructions">
+        <h2>Start Your Engines!</h2>
+        <p>
+          enter a word in the text box above by pushing the button or using your
+          Enter key.<br />
+          Use the last letter of that word as the first letter the next word you
+          enter.<br />
+          See how long you can keep this pattern going.<br />
+        </p>
+      </div>
 
-      <div id='instructions'>
-            <h2>Start Your Engines!</h2>
-            <p>
-            enter a word in the text box above by pushing the button or using your Enter key.<br>
-            Use the last letter of that word as the first letter the next word you enter.<br> 
-            See how long you can keep this pattern going.<br>
-            </p>
-        </div>
-
-        <div id='scoring'>
-            <h2>Scoring</h2>
-            <p>TBD</p>
-        </div>
+      <div id="scoring">
+        <h2>Scoring</h2>
+        <p>TBD</p>
+      </div>
     </footer>
     <script src="js/words.js"></script>
     <script src="js/app.js"></script>
-    
   </body>
 </html>
