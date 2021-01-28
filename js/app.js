@@ -92,6 +92,16 @@ function userFinish() {
   document.getElementById("inputUserName").style.display = "block";
 }
 
+function compareLastWord(newWord){
+  var lastWord = displayWords[displayWords.length-1]
+  var lastChar = lastWord.substring(lastWord.length-1,lastWord.length);
+  var fistChar = newWord.substring(0,1);
+  if(lastChar === fistChar){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 // Event listeners added
 var usersName = document.getElementById('inputUserName');
