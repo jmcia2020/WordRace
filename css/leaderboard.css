@@ -15,14 +15,7 @@ body {
     color:azure;
     font-stretch: extra-expanded;
   }
-  
-  header img{ 
-    background-color: #969696;
-    float:left;
-    margin-top: 15px;
-    margin-right: 30px;
-  }
-  
+    
   nav{
     background-color:rgb(30, 30, 36); 
     border-bottom-color:orangered;
@@ -34,12 +27,35 @@ body {
   
   li{
    display: inline-block;
-   font-size: 32px;
+   font-size: 28px;
    line-height: 2em;
    font-weight: bold;
   }
   
-  a{
+  li a{
     text-decoration: none;
     color: rgb(123, 216, 29);
+  }
+
+  main image{ 
+    width:fit-content;
+    display: center;
+  }
+
+  table, th, td{
+    background-color:#6B6A66;
+    opacity: 1;
+    width: 50%;
+    margin: auto;
+    border: 1px solid whitesmoke;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 30px;
+    table-layout: fixed;
+  }
+
+  footer{
+      height: 250px;
+      background-color: #2EA44F;
+      padding-top: 30px;
   }
