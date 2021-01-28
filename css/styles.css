@@ -48,18 +48,35 @@ a{
 }
 
 #dash{
-  text-align: center;
+
   display: block;
   margin: 0 auto;
+  background-repeat: no-repeat;
 }
 
+#placeHolder {
+  height: 550px;
+ padding-top: 125px;
+ padding-left: 250px;
+ text-align: left-justify;
+ color: lime;
+ font-size: larger;
+
+}
+form {
+  text-align: center;
+  }
+
+span {
+  padding: 15px;
+}
 
 /* game-panel{
 
 }
 
 form{
-
+text-align: center;
 }
   
   
