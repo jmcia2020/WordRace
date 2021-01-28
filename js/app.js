@@ -62,8 +62,9 @@ function handleInputWords(event) {
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
   wordCount++;
-  displayWords.push(userInput);
-  wordsValidate();
+  if(wordsValidate()){
+    displayWords.push(userInput);
+  }
   if (wordCount === 5) {
     userFinish();
   }
