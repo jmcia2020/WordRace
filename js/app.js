@@ -6,6 +6,7 @@ var currentPlayer = 0;
 var users = [];
 var displayWords =[];
 
+
 // This function validates the words against the words.js file
 function wordsValidate() {
   if (words.indexOf(userInput.toLowerCase()) > -1) {
@@ -23,7 +24,7 @@ function handleUserName(event) {
   var form = document.getElementById('inputUserName'); 
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
-  console.log(userName)
+  console.log(userName);
   userName = userName.toUpperCase();
   users.push(loadUser(userName));
   form.textContent = "welcome" + userName;

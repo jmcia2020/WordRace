@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/20318822/how-to-create-a-stopwatch-using-javascript
+
 var Stopwatch = function(elem, options) {
 
   var timer       = createTimer(),
@@ -78,3 +80,16 @@ var Stopwatch = function(elem, options) {
   this.stop = stop;
   this.reset = reset;
 };
+
+
+var elem = document.getElementById("my-stopwatch");
+var timer = new Stopwatch(elem, {delay: 10});
+
+// start the timer
+timer.start();
+
+// stop the timer
+timer.stop();
+
+// reset the timer
+timer.reset();
