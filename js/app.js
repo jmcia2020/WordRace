@@ -1,81 +1,79 @@
 /* global words */
 "use strict";
 console.log("Ready to Race!");
-var userInput = '';
-var currentPlayer = 0;
-var users = [];
-var displayWords =[];
-
+var userInput = "";
+var currentPlayer = null;
+var userCollection = {};
+var displayWords = [];
+var wordCount = 0;
 // This function validates the words against the words.js file
 function wordsValidate() {
-  if (words.indexOf(userInput.toLowerCase()) > -1) {
-   // users[currentPlayer].scoring();
-    return true;
+  if (currentPlayer === null) {
+    return;
+  }
+  if (words.includes(userInput.toLowerCase())) {
+    userCollection[currentPlayer] += 50;
+    for (var i = 3; i < userInput.length; i++) {
+      userCollection[currentPlayer] += 25;
+    }
   } else {
-    alert("Please enter a valid word.");
-    return false;
+    alert("Invalid word, you get no points...");
   }
 }
 
 // This function is an event handler that takes in the userName and changes it to UpperCase
 function handleUserName(event) {
   event.preventDefault();
-  var form = document.getElementById('inputUserName'); 
-  var userNameInput = document.getElementById('username');
+  var form = document.getElementById("inputUserName");
+  var userNameInput = document.getElementById("username");
   var userName = userNameInput.value;
-  console.log(userName)
+  console.log(userName);
   userName = userName.toUpperCase();
-  users.push(loadUser(userName));
-  form.textContent = "welcome" + userName;
+  console.log(userCollection);
+  if (userCollection[userName] === undefined) {
+    userCollection[userName] = 0;
+    console.log("creating new user");
+  }
+  currentPlayer = userName;
+  //form.textContent = "Welcome " + userName;
 }
-
+// This function is used to end a game round and reset user form for multiple players
+function UserFinish() {
+  localStorage.setItem("users", JSON.stringify(userCollection));
+  var form = document.getElementById("inputUserName");
+  var form2 = document.getElementById("inputWords");
+  form.reset();
+  form2.reset();
+  alert("Your turn is over");
+  wordCount = 0;
+}
 // This function is an event handler that changes the wordInput to lowerCase for validation
 
 function handleInputWords(event) {
   event.preventDefault();
-  var form2 = document.getElementById('inputWords');
-  var wordInput = document.getElementById('wordInput');
+  var form2 = document.getElementById("inputWords");
+  var wordInput = document.getElementById("wordInput");
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
+  wordCount++;
+  console.log(wordCount);
   console.log(userInput);
   wordsValidate();
   form2.reset();
-  //updateScore();
+  if (wordCount === 5) {
+    UserFinish();
+  }
 }
-
 var usersName = document.getElementById("inputUserName");
 
 usersName.addEventListener("submit", handleUserName);
 
 var userInput = document.getElementById("inputWords");
 userInput.addEventListener("submit", handleInputWords);
-
-var User = function (name, scores) {
-  this.name = name;
-  this.scores = scores;
-  this.currentScore;
-};
-
-User.prototype.scoring = function () {
-  this.currentScore += 50;
-  for (var i = 3; i < userInput.length; i++) {
-    this.currentScore += 25;
-  }
-};
-
-User.prototype.addScore = function (score) {
-  this.scores.push(score);
-};
+// inital creation of user or loading from local
 
 function saveToLocalStorage() {
-  var totalUsers = JSON.parse(localStorage.getItem("users"));
-  for (u in users) {
-    localStorage.setItem(users[u].name, JSON.stringify(users[u].scores));
-    if (totalUsers.indexOf(users[u].name) === -1) {
-      totalUsers.push(users[u].name);
-    }
-  }
-  localStorage.setItem("users", JSON.stringify(totalUsers));
+  localStorage.setItem("users", JSON.stringify(userCollection));
 }
 
 function loadUser(name) {
