@@ -50,11 +50,9 @@ text-align: center;
   width: 1000px;
   height: 500px;
   display: block;
-
-/*width: 750px;
   margin: 0 auto;
   background-repeat: no-repeat;
-}*/
+}
 
 #placeHolder {
  height: 300px;
