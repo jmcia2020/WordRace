@@ -12,8 +12,8 @@ document.getElementById("inputWords").style.display = "none";
 //Event listeners added
 var usersName = document.getElementById('inputUserName');
 usersName.addEventListener('submit', handleUserName);
-var userInput = document.getElementById('inputWords');
-userInput.addEventListener('submit', handleInputWords);
+var inputField = document.getElementById('inputWords');
+inputField.addEventListener('submit', handleInputWords);
 
 // Validates words against words.js file and displayWords arr then adds scores to the user object
 function wordsValidate() {
@@ -57,11 +57,14 @@ function handleInputWords(event) {
   event.preventDefault();
   var form2 = document.getElementById('inputWords');
   var wordInput = document.getElementById('wordInput');
+  var harcoreChk = document.getElementById('chkHardcore');
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
   wordCount++;
-  if(wordsValidate()){
-    displayWords.push(userInput);
+  if (!harcoreChk.checked || compareLastWord(userInput)){
+    if(wordsValidate()){
+      displayWords.push(userInput);
+    }
   }
   if (wordCount === 5) {
     userFinish();
@@ -90,6 +93,16 @@ function userFinish() {
   document.getElementById("inputUserName").style.display = "block";
 }
 
+function compareLastWord(newWord){
+  var lastWord = displayWords[displayWords.length-1]
+  var lastChar = lastWord.substring(lastWord.length-1,lastWord.length);
+  var fistChar = newWord.substring(0,1);
+  if(lastChar === fistChar){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 // Event listeners added
 var usersName = document.getElementById('inputUserName');
