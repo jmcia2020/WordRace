@@ -66,23 +66,33 @@ text-align: center;
 }
 
  #inputWords {
-padding-top: 160px;
+padding-top: 100px;
 padding-right: 80px;
  }
 
  #inputUserName{
-padding-top: 160px;
+padding-top: 100px;
 padding-right: 80px;
  }
  
 form {
 text-align: center;
+font-size: 2em;
+
   }
 
 span {
 padding: 15px;
 }
 
+#chkHardcore{
+  display: none;
+}
+
+label{
+  color: #2EA44F;
+  font-weight: bold;
+}
 
 /* display: block;
 /*  font-family: Audiowave;
@@ -99,7 +109,6 @@ padding: 15px;
 
 button {
 height:25px;
-width:50px;
 background-color: #C4000C;
 }
 
