@@ -28,13 +28,13 @@ function wordsValidate() {
     userCollection[currentPlayer] += 50;
     for (var i = 3; i < userInput.length; i++) {
       userCollection[currentPlayer] += 25;
-      return true;
     }
+    return true;
   } else {
     alert('That\'s not one of the 1000 most common words... no points');
+    return false;
   }
 }
-//}
 
 // Event handler that takes in username, changes it to UpperCase, and displays it
 function handleUserName(event) {
@@ -42,8 +42,6 @@ function handleUserName(event) {
   var form = document.getElementById('inputUserName');
   var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
-
-  console.log(userName);
   userName = userName.toUpperCase();
   console.log(userCollection);
   if (userCollection[userName] === undefined) {
