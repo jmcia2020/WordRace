@@ -15,15 +15,11 @@ usersName.addEventListener('submit', handleUserName);
 var inputField = document.getElementById('inputWords');
 inputField.addEventListener('submit', handleInputWords);
 
-//Globally used elements
-var harcoreChk = document.getElementById('chkHardcore');
-
 // Validates words against words.js file and displayWords arr then adds scores to the user object
 function wordsValidate() {
   if (currentPlayer === null) {
     return;
   }
-  
   if (displayWords.includes(userInput.toLowerCase())) {
     alert('You already used that word... no points');
     return false;
@@ -63,11 +59,14 @@ function handleInputWords(event) {
   event.preventDefault();
   var form2 = document.getElementById('inputWords');
   var wordInput = document.getElementById('wordInput');
+  var harcoreChk = document.getElementById('chkHardcore');
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
   wordCount++;
-  if(wordsValidate()){
-    displayWords.push(userInput);
+  if (!harcoreChk.checked || compareLastWord(userInput)){
+    if(wordsValidate()){
+      displayWords.push(userInput);
+    }
   }
   if (wordCount === 5) {
     userFinish();
