@@ -1,31 +1,46 @@
 /* global words */
-"use strict";
-var userInput = "";
+'use strict';
+var userInput = '';
 var currentPlayer = null;
 var userCollection = {};
 var displayWords = [];
 var wordCount = 0;
 
-// This function validates the words against the words.js file
+//Hides the word input form (until a username is entered)
+document.getElementById("inputWords").style.display = "none";
+
+//Event listeners added
+var usersName = document.getElementById('inputUserName');
+usersName.addEventListener('submit', handleUserName);
+var userInput = document.getElementById('inputWords');
+userInput.addEventListener('submit', handleInputWords);
+
+// Validates words against words.js file and displayWords arr then adds scores to the user object
 function wordsValidate() {
   if (currentPlayer === null) {
     return;
   }
-  if (words.includes(userInput.toLowerCase())) {
+  if (displayWords.includes(userInput.toLowerCase())) {
+    alert('You already used that word... no points');
+    return false;
+  }
+  else if (words.includes(userInput.toLowerCase())) {
     userCollection[currentPlayer] += 50;
     for (var i = 3; i < userInput.length; i++) {
       userCollection[currentPlayer] += 25;
     }
+    return true;
   } else {
-    alert("Invalid word, you get no points...");
+    alert('That\'s not one of the 1000 most common words... no points');
+    return false;
   }
 }
 
-// This function is an event handler that takes in the userName and changes it to UpperCase
+// Event handler that takes in username, changes it to UpperCase, and displays it
 function handleUserName(event) {
   event.preventDefault();
-  var form = document.getElementById("inputUserName");
-  var userNameInput = document.getElementById("username");
+  var form = document.getElementById('inputUserName');
+  var userNameInput = document.getElementById('username');
   var userName = userNameInput.value;
   userName = userName.toUpperCase();
   console.log(userCollection);
@@ -33,36 +48,51 @@ function handleUserName(event) {
     userCollection[userName] = 0;
   }
   currentPlayer = userName;
-  form.textContent = "Welcome " + userName;
+  document.getElementById("inputUserName").style.display = "none";
+  document.getElementById("inputWords").style.display = "block";
 }
 
-// This function is used to end a game round and reset user form for multiple players
-function UserFinish() {
-  localStorage.setItem("users", JSON.stringify(userCollection));
-  var form = document.getElementById("inputUserName");
-  var form2 = document.getElementById("inputWords");
-  form.reset();
-  form2.reset();
-  alert("Your turn is over");
-  wordCount = 0;
-}
-
-// This function is an event handler that changes the wordInput to lowerCase for validation
+// Event handler pushes words to arr and prints them on screen
 function handleInputWords(event) {
   event.preventDefault();
-  var form2 = document.getElementById("inputWords");
-  var wordInput = document.getElementById("wordInput");
+  var form2 = document.getElementById('inputWords');
+  var wordInput = document.getElementById('wordInput');
   userInput = wordInput.value;
   userInput = userInput.toLowerCase();
   wordCount++;
-  wordsValidate();
-  form2.reset();
+  if(wordsValidate()){
+    displayWords.push(userInput);
+  }
   if (wordCount === 5) {
-    UserFinish();
+    userFinish();
+  }
+  form2.reset();
+  var placeHolder = document.getElementById('placeHolder');
+  placeHolder.innerHTML = '';
+  for (var i = displayWords.length-1; i >= 0; i--) {
+    var wordList = document.createElement('span');
+    wordList.textContent = displayWords[i];
+    placeHolder.appendChild(wordList);
   }
 }
 
-var usersName = document.getElementById("inputUserName");
-usersName.addEventListener("submit", handleUserName);
-var userInput = document.getElementById("inputWords");
-userInput.addEventListener("submit", handleInputWords);
+// Function ends a game round and resets user form for multiple players
+function userFinish() {
+  displayWords = [];
+  localStorage.setItem('users', JSON.stringify(userCollection));
+  var form = document.getElementById('inputUserName');
+  var form2 = document.getElementById('inputWords');
+  form.reset();
+  form2.reset();
+  alert('Your turn is over. Your score was ' + userCollection[currentPlayer]);
+  wordCount = 0;
+  document.getElementById("inputWords").style.display = "none";
+  document.getElementById("inputUserName").style.display = "block";
+}
+
+
+// Event listeners added
+var usersName = document.getElementById('inputUserName');
+usersName.addEventListener('submit', handleUserName);
+var userInput = document.getElementById('inputWords');
+userInput.addEventListener('submit', handleInputWords);

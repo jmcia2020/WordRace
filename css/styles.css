@@ -17,13 +17,6 @@ h1{
   font-stretch: extra-expanded;
 }
 
-header img{ 
-  /* background-color: #969696; */
-  float:left;
-  margin-top: 15px;
-  margin-right: 30px;
-}
-
 nav{
   background-color:rgb(30, 30, 36);
   border-top-color: #C4000C; 
@@ -37,7 +30,7 @@ nav{
 
 li{
  display: inline-block;
- font-size: 32px;
+ font-size: 28px;
  line-height: 2em;
  font-weight: bold;
 }
@@ -46,35 +39,71 @@ a{
   text-decoration: none;
   color: rgb(123, 216, 29);
 }
+main{
+text-align: center;
+
+}
 
 #dash{
-  text-align: center;
+  /* text-align: center; */
+
+  width: 1000px;
+  height: 500px;
   display: block;
+
+/*width: 750px;
   margin: 0 auto;
+  background-repeat: no-repeat;
+}*/
+
+#placeHolder {
+ height: 300px;
+
+ padding-top: 125px;
+ padding-left: 1050px;
+ float: right;
+ display: inline-block;
+ color: lime;
+ font-size: 28px;
+}
+
+ #inputWords {
+padding-top: 160px;
+padding-right: 80px;
+ }
+
+ #inputUserName{
+padding-top: 160px;
+padding-right: 80px;
+ }
+ 
+form {
+text-align: center;
+  }
+
+span {
+padding: 15px;
 }
 
 
-/* game-panel{
+/* display: block;
+/*  font-family: Audiowave;
 
-}
-
-form{
-
-}
   
   
-fieldset{
+/* fieldset{
 
-}
+} */
 
-label {
+/* label {
 
-}
+} */
 
 button {
 height:25px;
 width:50px;
-} */
+background-color: #C4000C;
+}
 
 h2{
   font-family: Audiowide;
@@ -93,7 +122,6 @@ scoring{
 p{
   padding-bottom: 15px;
   line-height: 2em;
-  
 }
 
 footer{
