@@ -110,20 +110,14 @@ function compareLastWord(newWord){
   }
 }
 
-var Player = function (name, score) {
+function Player (name, score) {
   this.name = name;
   this.score = score;
-};
+}
 
 function saveToLocalStorage() {
   localStorage.setItem('score',JSON.stringify(player.score));
   localStorage.setItem('name',JSON.stringify(player.name));
-}
-
-function loadPlayer() {
-  var score = JSON.parse(localStorage.getItem('score'));
-  var name = JSON.parse(localStorage.getItem('name'));
-  return new Player(name, score);
 }
 
 // Event listeners added
