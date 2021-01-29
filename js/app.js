@@ -27,9 +27,9 @@ function wordsValidate() {
     return false;
   }
   else if (words.includes(userInput.toLowerCase())) {
-    player[currentPlayer] += 50;
+    player.score += 50;
     for (var i = 3; i < userInput.length; i++) {
-      player[currentPlayer] += 25;
+      player.score += 25;
     }
     return true;
   } else {
@@ -74,7 +74,7 @@ function handleInputWords(event) {
   form2.reset();
   var placeHolder = document.getElementById('placeHolder');
   placeHolder.innerHTML = '';
-  for (var i = displayWords.length-1; i >= 0; i--) {
+  for (var i = displayWords.length-1; i >= displayWords.length-1; i--) {
     var wordList = document.createElement('span');
     wordList.textContent = displayWords[i];
     placeHolder.appendChild(wordList);
@@ -103,6 +103,9 @@ function compareLastWord(newWord){
   if(lastChar === fistChar){
     return true;
   }else{
+    if(harcoreChk){
+      alert('last letter and first letter do not match!');
+    }
     return false;
   }
 }
@@ -112,19 +115,15 @@ var Player = function (name, score) {
   this.score = score;
 };
 
-Player.prototype.addScore = function (score) {
-  this.scores.push(score);
-};
-
 function saveToLocalStorage() {
-  localStorage.setItem('scores',JSON.stringify(player.scores));
+  localStorage.setItem('score',JSON.stringify(player.score));
   localStorage.setItem('name',JSON.stringify(player.name));
 }
 
 function loadPlayer() {
-  var scores = JSON.parse(localStorage.getItem('scores'));
+  var score = JSON.parse(localStorage.getItem('score'));
   var name = JSON.parse(localStorage.getItem('name'));
-  return new Player(name, scores);
+  return new Player(name, score);
 }
 
 // Event listeners added
