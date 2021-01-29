@@ -15,11 +15,15 @@ usersName.addEventListener('submit', handleUserName);
 var inputField = document.getElementById('inputWords');
 inputField.addEventListener('submit', handleInputWords);
 
+//Globally used elements
+var harcoreChk = document.getElementById('chkHardcore');
+
 // Validates words against words.js file and displayWords arr then adds scores to the user object
 function wordsValidate() {
   if (currentPlayer === null) {
     return;
   }
+  
   if (displayWords.includes(userInput.toLowerCase())) {
     alert('You already used that word... no points');
     return false;
