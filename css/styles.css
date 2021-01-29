@@ -55,13 +55,10 @@ text-align: center;
 }
 
 #placeHolder {
- height: 300px;
-
- padding-top: 125px;
- padding-left: 1050px;
- float: right;
+ height: fit-content;
  display: inline-block;
- color: lime;
+ margin-top: 10px;
+ color: #ff5437;
  font-size: 28px;
 }
 
@@ -90,7 +87,7 @@ padding: 15px;
 }
 
 label{
-  color: #2EA44F;
+  color: #ff5437;
   font-weight: bold;
 }
 
