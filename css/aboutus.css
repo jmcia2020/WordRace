@@ -3,10 +3,54 @@ body {
   margin: 0;
 }
 
+header{
+  height: 75px;
+  background-color: #2EA44F;
+  padding-top: 30px;  
+}
+
+h1{
+  font-family: Audiowide;
+  text-align: center;
+  font-size: 50px;
+  color:azure;
+  font-stretch: extra-expanded;
+}
+  
+nav{
+  background-color:rgb(30, 30, 36); 
+  /* border-bottom: */
+}
+ nav ul{
+   display:flex;
+   justify-content: space-evenly;
+ }
+
+li{
+ display: inline-block;
+ font-size: 28px;
+ line-height: 2em;
+ font-weight: bold;
+}
+
+li a{
+  text-decoration: none;
+  color: rgb(123, 216, 29);
+}
+
 html {
   box-sizing: border-box;
 }
 
+
+h2{
+  font-weight: bolder;
+}
+
+main{
+  width: 80%;
+  margin: 0 auto;
+}
 *,
 *:before,
 *:after {
@@ -15,21 +59,27 @@ html {
 
 .column {
   float: left;
-  width: 33.3%;
+  width: 24%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
 
+img{
+  height: 300px;
+  /* width: 20px; */
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-color: ;
   margin: 8px;
 }
 
 .about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
+  
+  text-align: left;
+  background-color: whitesmoke
+  color: ;
 }
 
 
@@ -40,7 +90,7 @@ html {
 .container::after,
 .row::after {
   content: "";
-  clear: both;
+  /* clear: both; */
   display: table;
 }
 nav{
@@ -49,7 +99,8 @@ nav{
 }
 
 .title {
-  color: grey;
+  font-weight: bold;
+  color: #2EA44F;
 }
 
 .button {
@@ -57,8 +108,9 @@ nav{
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
+  color: #2EA44F;
   background-color: #000;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -68,9 +120,3 @@ nav{
   background-color: #555;
 }
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}

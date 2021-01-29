@@ -42,7 +42,7 @@ body {
     position:fixed;
     background-image: url("../images/photoFinishFull2.jpg");
     background-size: cover;
-    height: 700px;
+    width 100%;
   }
 
   table, th, td{
