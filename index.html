@@ -19,7 +19,6 @@
     <header>
       <h1>Word Race</h1>
     </header>
-
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -28,7 +27,7 @@
       </ul>
     </nav>
     <main>
-      <section id="dash" style="background-image: url(images/dashboard.jpg);" >
+      <section id="dash" style="background-image: url(images/dashboard.jpg);">
         <section id="game-panel">
           <form id="inputUserName">
             <input type="checkbox" id="chkHardcore">
@@ -52,21 +51,23 @@
           <p></p>
         </section>
       </section>
+      <div id="container">
+        <section class="instructions">
+          <h2>Start Your Engines!</h2>
+          <p>
+            The game is simple! First things first you will need to enter your name. Then you can begin typing in words!
+            Typing words will give you points if they match our dictionary of the 1000 most common English words. The longer the word the better!
+            You only have 5 attempts so try to think hard!
+          </p>
+        </section>
+        <section class="scoring">
+          <h2>Scoring</h2>
+          <p>The game scores you based on the length of the words you use. 
+            Every valid word gives 50 points and every word longer than 3 characters adds an additional 25 points!</p>
+        </section>
+      </div>
     </main>
     <footer>
-      <div id="instructions">
-        <h2>Start Your Engines!</h2>
-        <p>
-          The game is simple! First things first you will need to enter your name. Then you can begin typing in words! <br>
-          Typing words will give you points if they match our dictionary of the 1000 most common english words. The longer the word the better!<br>
-          You only have 5 attempts so try to think hard!
-        </p>
-      </div>
-
-      <div id="scoring">
-        <h2>Scoring</h2>
-        <p>The game scores you based on the length of the words you use. Every valid word gives 50 points and every word longer than 3 characters adds an additional 25 points!</p>
-      </div>
     </footer>
     <script src="js/words.js"></script>
     <script src="js/app.js"></script>

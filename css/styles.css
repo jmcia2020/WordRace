@@ -1,4 +1,3 @@
-
 body {
   background-color: antiquewhite;
 }
@@ -19,9 +18,8 @@ h1{
 
 nav{
   background-color:rgb(30, 30, 36);
-  border-top-color: #C4000C; 
-  border-bottom-color: #C4000C;
-}
+  border: solid #C4000C; 
+  }
 
  nav ul{
    display:flex;
@@ -41,28 +39,26 @@ a{
 }
 main{
 text-align: center;
-
 }
 
 #dash{
-  /* text-align: center; */
-
-  width: 1000px;
-  height: 500px;
-  display: block;
-  margin: 0 auto;
+  min-height: 500px;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #placeHolder {
  height: fit-content;
  display: inline-block;
- margin-top: 10px;
+ margin-top: 50px;
  color: #ff5437;
  font-size: 28px;
+ border: solid #C4000C; 
 }
 
- #inputWords {
+#inputWords {
 padding-top: 100px;
 padding-right: 80px;
  }
@@ -75,8 +71,7 @@ padding-right: 80px;
 form {
 text-align: center;
 font-size: 2em;
-
-  }
+}
 
 span {
 padding: 15px;
@@ -90,22 +85,15 @@ label{
   color: #ff5437;
   font-weight: bold;
 }
-
-/* display: block;
-/*  font-family: Audiowave;
-
-  
-  
-/* fieldset{
-
-} */
-
-/* label {
-
-} */
-
+/*
+#game-panel{
+  border: solid #C4000C; 
+  align-items: center;
+}
+*/
 button {
-height:25px;
+height:35px;
+border-radius: 15%;
 background-color: #C4000C;
 }
 
@@ -115,21 +103,34 @@ h2{
   color:azure;
 }
 
-instructions{
-  padding: 5px 5px 5px 5px;
-}
-
-scoring{
-  padding-top: 50px;
-}
-
-p{
-  padding-bottom: 15px;
-  line-height: 2em;
-}
-
-footer{
-  height: 250px;
+#container{
+  box-sizing: border-box;
+  max-width: 100vw;
+  display: flex;
   background-color: #2EA44F;
   padding-top: 30px;
 }
+
+.instructions{
+  width: 50vw;
+  font-size: 1em;
+  background-color: #ff5437;
+}
+
+.scoring{
+  width: 50vw;
+  font-size: 1em;
+  background-color: aqua;
+}
+
+p{
+  padding: 10px 20px;
+  line-height: 2em;
+}
+/*
+footer{
+  display:flex-box;
+  height: 250px;
+  background-color: #2EA44F;
+  padding-top: 30px;
+}*/
