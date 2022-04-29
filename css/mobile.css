@@ -1,0 +1,22 @@
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 750px){
+
+
+  body{
+    background-color: aqua;
+    /* width: 350px; */
+  }
+
+  table, th, td{
+    /* background-color: rgb(0, 255, 55) !important;
+    opacity: .85;
+    width: 90%;
+    margin: 50px auto;
+    border: 1px solid whitesmoke;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.15em; */
+    /* table-layout: fixed; */
+    }
+  }
+}
