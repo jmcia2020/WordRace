@@ -56,13 +56,14 @@
     border-collapse: collapse;
     text-align: center;
     font-size: 1.15em;
-    table-layout: fixed;
+    /* table-layout: fixed; */
   }
 
   footer{
-      position: sticky
+      position: sticky;
       height: 150px;
       background-color: #2EA44F;
       padding-top: 30px;
       border: 5px solid red;
   }
+
