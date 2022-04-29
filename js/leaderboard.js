@@ -11,3 +11,8 @@ var player = loadPlayer();
 
 document.getElementById("user1").innerText = player.name;
 document.getElementById("score1").innerText = player.score;
+
+//user name array
+
+//score array
+
